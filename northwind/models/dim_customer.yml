@@ -1,16 +1,24 @@
 version: 2
 
 models:
-  - name: dim_customer
-    description: Customer Dimension. One row per customer
+  - name: dim_user
+    description: user Dimension. One row per user
     columns:
-      - name: customerkey
-        description: The surrogate key of the customer
+      - name: userkey
+        description: The surrogate key of the user
         tests:
           - not_null
           - unique
-      - name: customerid
-        description: The business / source key of the customer
+      - name: userid
+        description: The primary key of the source system
         tests:
           - not_null
           - unique
+      - name: useremail
+        description: email of the user
+      - name: username
+        description: user last name first, then first name
+      - name: userzipcode
+        description: zipcode of the user
+      
+          
